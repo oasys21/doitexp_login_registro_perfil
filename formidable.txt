@@ -1,0 +1,3 @@
+git clone https://github.com/noraesae/express-formidable.git
+cd express-formidable
+npm install
