@@ -1,24 +1,35 @@
 extends layout
-
+#user
 block content
 	div.container
 		div.row
-			div.col-sm-4.col-md-4.col-md-offset-2
+			div.col-sm-4.col-md-4.col-md-offset-0
 				h1.text-center.login-title Registro de Usuario
-					div.signup-wall
-						form(class='form-signin', action='/signup', method='POST')
-							input(type='text', name='username', class='form-control', placeholder='Usuario',required, autofocus)
-							input(type='password', name='password', class='form-control nomargin', placeholder='Contraseña', required)
-							input(type='email', name='email', class='form-control', placeholder='Email',required)
-							input(type='text', name='names', class='form-control', placeholder='Nombres',required)
-							input(type='text', name='surnames', class='form-control', placeholder='Apellidos',required)
-							input(type='date', name='born', class='form-control', placeholder='Nacido el',required)
-							input(type='text', name='sex', class='form-control', placeholder='Sexo',required)
-							input(type='text', name='street', class='form-control', placeholder='Dirección',required)
-							input(type='text', name='distrit', class='form-control', placeholder='Comuna',required)
-							input(type='text', name='city', class='form-control', placeholder='Ciudad',required)
-							input(type='number', name='code', class='form-control', placeholder='Area',required)
-							input(type='number', name='number', class='form-control', placeholder='Número',required)
+				div.signup-wall
+					form(class='form-signin', action='/signup', method='POST')
+							h8 Usuario...
+								input(type='text', name='username',  class='form-control', placeholder='Username',required, autofocus)
+							h8 Contraseña..
+								input(type='password', name='password', class='form-control', placeholder='Password', required)
+							h8 Correo Electrónico..
+								input(type='email', name='email', class='form-control', required)
+							h8 Nombres....
+								input(type='text', name='names', class='form-control', placeholder='Nombres',required)
+							h8 Apellidos..
+								input(type='text', name='surnames', class='form-control' ,placeholder='Apellidos',required)
+							h8 Nacido el..
+								input(type='date', name='born', class='form-control', placeholder='Nacimiento',required)
+							h8 Sexo....
+								input(type='text', name='sex', class='form-control', placeholder='Sexo',required)
+							h8 Dirección..	(calle,número,depto,of,blk)
+								input(type='text', name='street' class='form-control', placeholder='Direccion',required)
+							h8 Comuna....
+								input(type='text', name='distrit', class='form-control', placeholder='Comuna',required)
+							h8 Ciudad....
+								input(type='text', name='city', class='form-control', placeholder='Ciudad',required)
+							h8 Teléfono Móvil...
+								input(type='number', name='code' , class='form-control', placeholder='Código Area',required)
+								input(type='number', name='number', class='form-control', placeholder='Número Móvil',required)
 							br
 							button(class='btn btn-lg btn-primary btn-block', type='submit') Enviar Registro
 							span.clearfix

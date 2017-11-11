@@ -1,3 +1,37 @@
 git clone https://github.com/noraesae/express-formidable.git
 cd express-formidable
 npm install
+
+testing with Cloud Foundry
+You can push this project as a Cloud Foundry project to try it out.
+
+First, create a service name cf-env-test with the following command:
+
+cf cups cf-env-test -p "url, username, password, database"
+You will be prompted for these values; enter something reasonable like:
+
+url>      http://example.com
+username> userid
+password> passw0rd
+database> the-db
+Next, push the app with cf push.
+
+cf cups cf-env-test -p "http://example.com, userid , passw0rd, dbcf"
+
+
+
+profiles.jade
+h6 Usuario...
+  input(type='text', name='username', value='#{username}', class='form-control', placeholder='Username',required, autofocus)
+h6 Contraseña..
+  input(type='password', name='password', value='#{password}', class='form-control', placeholder='Password', required)
+
+#message
+if message
+    h1.text-center.error-message #{message}
+
+register.jade
+    h8 Usuario...
+      input(type='text', name='username',  class='form-control', placeholder='Username',required, autofocus)
+    h8 Contraseña..
+      input(type='password', name='password', class='form-control', placeholder='Password', required)

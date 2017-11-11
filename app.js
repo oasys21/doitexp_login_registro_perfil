@@ -11,7 +11,8 @@ mongoose.connect(dbConfig.url);
 //
 var app = express();
 //
-// view engine setup
+// View engine setup
+//
 app.set('images', path.join(__dirname, 'images'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //
 // Configuring Passport
+//
 var passport = require('passport');
 var expressSession = require('express-session');
 // TODO - Why Do we need this key ?
@@ -40,12 +42,12 @@ app.use(flash());
 //
 var initPassport = require('./passport/init');
 initPassport(passport);
-
+//
 var routes = require('./routes/index')(passport);
 app.use('/', routes);
 //
 // catch 404 and forward to error handler
-
+//
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
@@ -65,7 +67,7 @@ if (app.get('env') === 'development') {
 }
 //
 module.exports = app;
-
+//
 /**
 module.exports = function(app){
 	// Register and configure the handlebars templating engine
@@ -84,3 +86,4 @@ module.exports = function(app){
 	app.use(express.urlencoded());
 };
 **/
+//

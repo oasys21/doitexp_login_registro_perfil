@@ -1,48 +1,35 @@
 extends layout
-
+#user
 block content
 	div.container
 		div.row
-		div.col-sm-4.col-md-4.col-md-offset-0
-		#user
-					div.profile-wall
-					form(class='form-signin', action='/profiles', method='POST')
-					h1.text-left.login-title Mi Perfil #{username}
-						br
-						h8 Usuario...
-						input(type='text', name='username', value='#{username}', class='form-control', placeholder='Username',required, autofocus)
-						br
-						h8 Contraseña..
-						input(type='password', name='password', value='#{password}', class='form-control', placeholder='Password', required)
-						br
-						h8 Correo Electrónico..
-						input(type='email', name='email', value='#{email}', class='form-control', required)
-						br
-						h8 Nombres....
-						input(type='text', name='names', value='#{names}', class='form-control', placeholder='Nombres',required)
-						br
-						h8 Apellidos..
-						input(type='text', name='surnames', value='#{surnames}', class='form-control' ,placeholder='Apellidos',required)
-						br
-						h8 Nacido el..
-						input(type='date', name='born', value='#{new Date(getDate(born),getMonth(born), getFullYear(born)}', class='form-control', placeholder='Nacimiento',required)
-						br
-						h8 Sexo....
-						input(type='text', name='sex', value='#{sex}', class='form-control', placeholder='Sexo',required)
-						br
-						h8 Dirección..	(calle,número,depto,of,blk)
-						input(type='text', name='street' value='#{street}',class='form-control', placeholder='Direccion',required)
-						br
-						h8 Comuna....
-						input(type='text', name='distrit' value='#{distrit}',class='form-control', placeholder='Comuna',required)
-						br
-						h8 Ciudad....
-						input(type='text', name='city', value='#{city}', class='form-control', placeholder='Ciudad',required)
-						br
-						h8
-						input(type='number', name='code' value='#{code}', class='form-control', placeholder='Código Area',required)
-						input(type='number', name='number' value='#{number}', class='form-control', placeholder='Número Móvil',required)
-						br
-						br
-						button(class='btn btn-lg btn-primary ', type='submit') Guardar
-						span.clearfix
+			div.col-sm-4.col-md-4.col-md-offset-0
+				h1.text-left.login-title Mi Perfil: #{username}
+					div.profiles-wall
+						form(class='form-signin', action='/profiles', method='POST')
+							h6 Usuario...
+								input(type='text', name='username', value='#{username}', class='form-control', placeholder='Username',required, autofocus,  )
+							h6 Contraseña..
+								input(type='password', name='password', value='#{password}', class='form-control', placeholder='Password', required, )
+							h6 Correo Electrónico..
+								input(type='email', name='email', value='#{email}', class='form-control', required)
+							h6 Nombres....
+								input(type='text', name='names', value='#{names}', class='form-control', placeholder='Nombres',required)
+							h6 Apellidos..
+								input(type='text', name='surnames', value='#{surnames}', class='form-control' ,placeholder='Apellidos',required)
+							h6 Nacido el..
+								input(type='date', name='born', value='#{born}', class='form-control', placeholder='Nacimiento',required)
+							h6 Sexo....
+								input(type='text', name='sex', value='#{sex}', class='form-control', placeholder='Sexo',required)
+							h6 Dirección..	(calle,número,depto,of,blk)
+								input(type='text', name='street' value='#{street}',class='form-control', placeholder='Direccion',required)
+							h6 Comuna....
+								input(type='text', name='distrit' value='#{distrit}',class='form-control', placeholder='Comuna',required)
+							h6 Ciudad....
+								input(type='text', name='city', value='#{city}', class='form-control', placeholder='Ciudad',required)
+							h6 Teléfono Móvil
+								input(type='number', name='code' value='#{code}', class='form-control', placeholder='Código Area',required)
+								input(type='number', name='number' value='#{number}', class='form-control', placeholder='Número Móvil',required)
+							h6 Presione para Almacenar los cambios efectuados...
+								button(class='btn btn-lg btn-primary ', type='submit') Guardar
+								span.clearfix

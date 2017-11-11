@@ -8,15 +8,15 @@ block content
 					h1.text-left.login-title Bienvenido #{username}
 					if(typeof '#{user.username}' != 'undefined')
 									ul.user-details
-									li Usuario....	:#{username}
-									li Email......	:#{email}
-									li Nombres....	:#{names}
-									li Apellidos..	:#{surnames}
-									li Nacido el..	:#{born}
-									li Sexo.......	:#{sex}
+									li Usuario....	: #{username}
+									li Email.......	: #{email}
+									li Nombres..	: #{names}
+									li Apellidos.. : #{surnames}
+									li Nacido el..	: #{born}
+									li Sexo........	 : #{sex}
 									li Direccion..	:#{street}
-									li Comuna.....	:#{distrit}
-									li Ciudad.....	:#{city}
+									li Comuna....: #{distrit}
+									li Ciudad.....	: #{city}
 									li Telefono...	:#{code}-#{number}
 									br
 									a(href='/profiles', class='text-left Modifica') Mi Perfil
