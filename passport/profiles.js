@@ -16,7 +16,7 @@ module.exports = function(passport){
                         console.log('Error in Profile: '+err);
                         return done(err);
                     }
-                    // already exists
+                    // Already Exists
                     if (user) {
                         console.log('Pasamos aqui donde cambiamos datos '+err);
                         var newUser = user;
@@ -31,7 +31,22 @@ module.exports = function(passport){
 												newUser.distrit = req.param('distrit');
 												newUser.city = req.param('city');
 												newUser.code = req.param('code');
-												newUser.number = req.param('number');
+                        //
+												newUser.userkind = req.param('userkind');
+                        newUser.rutid = req.param('rutid');
+                        newUser.academy = req.param('academy');
+                        newUser.facebook = req.param('facebook');
+                        newUser.twitter = req.param('twitter');
+                        newUser.instagram = req.param('instagram');
+                        newUser.account = req.param('account');
+                        newUser.bank = req.param('bank');
+                        newUser.creditcard = req.param('creditcard');
+                        newUser.bankcard = req.param('bankcard');
+                        newUser.cardcv = req.param('cardcv');
+                        newUser.name911 = req.param('name911');
+                        newUser.number911 = req.param('number911');
+                        newUser.chat = req.param('chat');
+                        newUser.photoper = req.param('photoper');
                         //
                         // newUser.password = createHash(req.param('password'));
                         // if (bCrypt.compareSync(password, newuser.password) {

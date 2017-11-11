@@ -13,5 +13,21 @@ module.exports = mongoose.model('User',{
 	distrit: String,
 	city: String,
 	code: Number,
-	number: Number
+	number: Number,
+	facebook: String,
+	twitter: String,
+	instagram: String,
+	account: String,
+	bank: String,
+	creditcard: String,
+	bankcard: String,
+	cardcv: String,
+	name911: String,
+	number911: String,
+	comment: String,
+	chat: String,
+	academy: String,
+	rutid: String,
+	userkind: String,
+	photoper: String
 });
